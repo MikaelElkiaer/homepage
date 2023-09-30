@@ -16,9 +16,9 @@ runs:
       shell: bash
     - name: Install Traefik
       run: |
-        helm install traefik traefik --repo https://traefik.github.io/charts --wait --timeout 120s
+        helm install traefik traefik --repo https://traefik.github.io/charts --wait --timeout 300s
       shell: bash
     - name: Install Homepage
       run: |
-        helm install homepage homepage --repo http://jameswynn.github.io/helm-charts --wait --timeout 120s
+        helm install homepage homepage --repo http://jameswynn.github.io/helm-charts --wait --timeout 300s
       shell: bash
