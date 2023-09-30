@@ -12,7 +12,7 @@ runs:
       uses: helm/kind-action@v1.8.0
     - name: Load test image
       run: |
-        kind load docker-image ${{ inputs.test-image-tag }}
+        kind load docker-image ${{ inputs.test-image-tag }} --name chart-testing
       shell: bash
     - name: Install Traefik
       run: |
