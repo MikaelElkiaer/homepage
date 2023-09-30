@@ -16,7 +16,9 @@ runs:
       shell: bash
     - name: Install Traefik
       run: |
-        helm install traefik traefik --repo https://traefik.github.io/charts --wait --timeout 300s --debug
+        helm install traefik traefik --repo https://traefik.github.io/charts \
+            --set service.type=ClusterIP \
+            --wait --timeout 300s --debug
       shell: bash
     - name: Install Homepage
       run: |
